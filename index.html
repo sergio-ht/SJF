@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLQ</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/chart.js"
+    ></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <p class="h1">SJF</p>
+        <button class="btn btn-warning ml-auto mt-1" id="animate-btn">
+          Comenzar Animación
+        </button>
+      </div>
+      <div class="row">
+        <div class="col">
+          <!-- form -->
+          <div class="card p-3">
+            <form action="">
+              <p class="h3">Agregar proceso</p>
+              <div class="form-group">
+                <label for="">Duracion</label>
+                <input id="burst-time" type="number" min="1" />
+              </div>
+              <div class="form-group">
+                <label for="">Llegada</label>
+                <input id="arrival-time" type="number" min="0" value="0" />
+              </div>
+
+              <div class="form-group">
+                <input class="btn btn-info" type="submit" value="Agregar" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col">
+          <!-- table -->
+          <div class="h3">Lista de Procesos</div>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th>id</th>
+                <th>Duración</th>
+                <th>Llegada</th>
+                <th class="hidden-table">T. Finalización</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chart-container">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
