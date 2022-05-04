@@ -160,7 +160,7 @@ animateBtn.addEventListener("click", (e) => {
       plugins: {
         title: {
           display: true,
-          text: "MLQ",
+          text: "SJF",
           font: {
             weight: "bold",
             size: 20,
